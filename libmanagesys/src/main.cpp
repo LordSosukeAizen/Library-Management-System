@@ -393,7 +393,7 @@ while(!end_prog){
                   cnt++;
                  } 
                 }catch(...) {
-                  cout << "No Books Borrowed in yout currect account\n";
+                  cout << "Error in showing Borrowed Books\n";
                 }
                 break;
                 }
@@ -464,8 +464,8 @@ while(!end_prog){
             cout << "Faculty\n";
             cout << "Hello "<< login_faculty->username << "\n";
              while(logged_in) {
-              cout << "1.Manage Profile\n2.View Account\n3.Borrow Book\n4.Return Book\n5.Show Available Books";
-              cout << "any other can be used for logout";
+              cout << "1.Manage Profile\n2.View Account\n3.Borrow Book\n4.Return Book\n5.Show Available Books\n6.Logout\n";
+              cout << "Enter your choice: ";
               int acc; cin >> acc;
               switch(acc) {
                 case 1: {
@@ -474,6 +474,7 @@ while(!end_prog){
                 }
 
                 case 2: {
+                  try{
                  Account* stdAcc = account_db.Find(login_faculty->userid);
                  int cnt = 1;
                  for(auto isbn: stdAcc->BorrowedBooks) {
@@ -481,6 +482,9 @@ while(!end_prog){
                   cout << cnt << ".  " << book->title << "  " << book->ISBN << "\n";
                   cnt++;
                  } 
+                }catch(...) {
+                  cout << "Error in showing borrowed books\n";
+                }
                 break;
                 }
 
@@ -523,11 +527,14 @@ while(!end_prog){
                 break;
               }
 
-              default: {
+              case 6: {
                 logged_in = false;
                 end_prog = true;
                 login_librarian = NULL;
                 break;
+              }
+              default:{
+                cout << "Invalid choice try again\n";
               }
               }
 
