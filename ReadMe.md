@@ -18,17 +18,21 @@ A lightweight C++ project that simulates a functional Library Management System.
 
 Library-Management-System/
 │
-├── db/ # Flat-file storage for all data (acts as database)
-│ ├── users.txt # Stores user details
-│ ├── books.txt # Stores book records
-│ └── accounts.txt # Stores login/account credentials
+├── db/                     
+│   ├── users.txt          
+│   ├── books.txt          
+│   └── accounts.txt       
 │
-├── src/ # Source code
-│ ├── main.cpp # Entry point for the system
-│ ├── System.cpp # Method implementations for core system logic
-│ └── System.h # Class declarations and function prototypes
-│
-└── README.md # Project documentation
+├── src/                    
+│   ├── main.cpp           
+│   ├── users.cpp        
+│   ├── books.cpp             
+│   ├── accounts.cpp
+├── include/                    
+│   ├── users.hpp          
+│   ├── books.hpp         
+│   ├── accounts.hpp   
+└── README.md               
 
 
 ---
@@ -59,8 +63,9 @@ After compilation, run the system using:
 
 ```bash
 ./main
-You will be presented with a simple CLI interface to interact with the system.
 ```
+You will be presented with a simple CLI interface to interact with the system.
+
 ## 🧭 Usage Guide
 
 You can perform various tasks such as:
