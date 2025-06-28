@@ -14,28 +14,6 @@ A lightweight C++ project that simulates a functional Library Management System.
 
 ---
 
-## 🗂️ Project Structure
-
-Library-Management-System/
-│
-├── db/                     
-│   ├── users.txt          
-│   ├── books.txt          
-│   └── accounts.txt       
-│
-├── src/                    
-│   ├── main.cpp           
-│   ├── users.cpp        
-│   ├── books.cpp             
-│   ├── accounts.cpp
-├── include/                    
-│   ├── users.hpp          
-│   ├── books.hpp         
-│   ├── accounts.hpp   
-└── README.md               
-
-
----
 
 ## 🏗️ Classes Overview
 
