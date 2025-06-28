@@ -1,51 +1,86 @@
-Library Management System
-This repository contains the files for a Library Management System. It includes the necessary classes, methods, and system implementation for managing a library's books, users, and accounts.
+# 📚 Library Management System
 
-Project Structure
-db/: Contains .txt files for storing all data related to users, accounts, and books.
+A lightweight C++ project that simulates a functional Library Management System. This system allows library administrators and users to manage books, user accounts, and lending operations. It uses plain-text files as a simple database solution for persistent storage.
 
-The .txt files act as the database for the system, holding relevant data in a text format.
-src/: Contains the source code files and class implementations.
+---
 
-main.cpp: The main system implementation file. It ties together all the components and contains the entry point for the system.
-System.cpp: Implements the methods for managing the system functionality.
-System.h: Header file defining the structure and method prototypes of the system.
-README.md: This file, providing a brief description and instructions for the Library Management System.
+## 🧩 Features
 
-Classes
-The system consists of the following main classes:
+- 📖 Add, view, search, and remove books
+- 👤 Register, authenticate, and manage user accounts
+- 📕 Borrow and return books
+- 💾 Persist all data using `.txt` files (no external DB required)
+- 🧹 Clean modular design with separate classes for system components
 
-User: Represents users of the library, including member information and interaction with the system.
-Account: Handles user accounts, including logins and authentication.
-Books: Manages the book collection, including adding, searching, and removing books.
-Database: Responsible for storing and retrieving data from text files in the db/ folder.
-Compilation Instructions
-To compile the code, navigate to the src/ directory and run the following command:
+---
 
-bash
-Copy
+## 🗂️ Project Structure
+
+Library-Management-System/
+│
+├── db/ # Flat-file storage for all data (acts as database)
+│ ├── users.txt # Stores user details
+│ ├── books.txt # Stores book records
+│ └── accounts.txt # Stores login/account credentials
+│
+├── src/ # Source code
+│ ├── main.cpp # Entry point for the system
+│ ├── System.cpp # Method implementations for core system logic
+│ └── System.h # Class declarations and function prototypes
+│
+└── README.md # Project documentation
+
+
+---
+
+## 🏗️ Classes Overview
+
+| Class     | Description |
+|-----------|-------------|
+| `User`    | Represents library members and their profiles |
+| `Account` | Manages account creation, login, and authentication |
+| `Books`   | Maintains the library’s book collection |
+| `Database`| Handles reading and writing data from/to text files |
+| `System`  | Coordinates high-level functionality and user flow |
+
+---
+
+## 🧪 How to Compile
+
+Navigate to the `src/` directory and compile using:
+
+```bash
 g++ -o main main.cpp
-This will generate the executable file main.
+This command will generate an executable named main.
+```
+## 🚀 How to Run
 
-Execution Instructions
-Once compiled, execute the program by running the following command:
+After compilation, run the system using:
 
-bash
-Copy
+```bash
 ./main
-This will start the Library Management System and allow you to interact with the system.
+You will be presented with a simple CLI interface to interact with the system.
+```
+## 🧭 Usage Guide
 
-How to Use
-When the system starts, follow the on-screen prompts to interact with the system.
-The system will allow you to perform tasks like:
-Add and remove books
-Register and manage user accounts
+You can perform various tasks such as:
+
+Add new books to the catalog
+Search for books by title
+Register and manage library members
 Borrow and return books
-View available books in the library
-Database Files
-The db/ directory contains .txt files that act as a simple database. These files store:
+View current inventory of available books
+All changes are saved automatically in the db/ folder.
 
-User information
-Book details
-Account details
-Each file stores relevant data in a simple text format, which the system reads and writes to.
+## 💾 Data Management
+
+Data is persistently stored in the following text files:
+
+users.txt: Contains registered user info
+books.txt: Tracks all available/borrowed books
+accounts.txt: Stores login credentials securely (in plain text for simplicity)
+These files act as a minimalistic database and can be edited manually if needed.
+
+
+## 📬 Contact
+For queries, suggestions, or collaborations, reach out via GitHub.
